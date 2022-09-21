@@ -38,7 +38,7 @@ jobs:
         dns-name-label: ${{ secrets.USERNAME }}-client
         image: identityserveracr2.azurecr.io/${{ secrets.USERNAME }}-client:${{ github.sha }}
         registry-login-server: identityserveracr2.azurecr.io
-        registry-username: IdentityServerACR2
+        registry-username: ${{ secrets.REGISTRY_USERNAME }} #IdentityServerACR2
         registry-password: ${{ secrets.REGISTRY_PASSWORD }}
         name: ${{ secrets.USERNAME }}-client
         ports: 80 443
