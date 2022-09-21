@@ -40,11 +40,11 @@ jobs:
         dns-name-label: ${{ secrets.USERNAME }}-client
         image: identityserveracr2.azurecr.io/${{ secrets.USERNAME }}-client:${{ github.sha }}
         registry-login-server: identityserveracr2.azurecr.io
-        registry-username: IdentityServerACR2 #${{ secrets.REGISTRY_USERNAME }} #
+        registry-username: IdentityServerACR2 #${{ secrets.REGISTRY_USERNAME }} 
         registry-password: ${{ secrets.REGISTRY_PASSWORD }}
         name: ${{ secrets.USERNAME }}-client
         ports: 80 443
         cpu: 0.5
         memory: 0.5
         location: 'northeurope'
-        environment-variables: ASPNETCORE_ENVIRONMENT=Production
+        environment-variables: ASPNETCORE_ENVIRONMENT=Production GITHUB__SHA=${{ github.sha }}
