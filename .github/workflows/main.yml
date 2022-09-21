@@ -1,7 +1,7 @@
 on: [push]
 name: Linux_Container_Workflow 
 
-environment-variables: ASPNETCORE_ENVIRONMENT=Production GITHUB__SHA=${{ github.sha }}
+#environment-variables: ASPNETCORE_ENVIRONMENT=Production GITHUB__SHA=${{ github.sha }}
 
 #Testing commit
 jobs:
